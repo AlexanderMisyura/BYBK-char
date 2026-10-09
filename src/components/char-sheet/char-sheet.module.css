@@ -1,0 +1,39 @@
+.char-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.name {
+  width: 550px;
+  max-width: stretch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-input,
+.large-text-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.large-text-input {
+  width: 550px;
+  max-width: stretch;
+  height: 6rem;
+}
