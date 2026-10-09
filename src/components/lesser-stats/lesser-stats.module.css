@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.stat {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  text-wrap: nowrap;
+}
+
+.roll-button {
+  height: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}

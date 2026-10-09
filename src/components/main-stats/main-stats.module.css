@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.vitality {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.characteristics-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.characteristic {
+  width: 100px;
+}
