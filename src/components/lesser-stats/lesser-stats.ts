@@ -66,12 +66,15 @@ export class LesserStats extends BaseComponent<'div'> {
     );
 
     this.damageButton.getElement().addEventListener('click', () => {
+      this.damageOutput.setText('');
       const damageModifier = Number(character?.damageModifier) ?? 0;
       const diceRoll = Math.floor(Math.random() * DAMAGE_DIE) + 1;
       const result = diceRoll + damageModifier;
-      this.damageOutput.setText(
-        `бросок 1к${DAMAGE_DIE}${Math.sign(damageModifier) >= 0 ? '+' : '-'}${Math.abs(damageModifier)} : ${diceRoll}${Math.sign(damageModifier) >= 0 ? '+' : '-'}${Math.abs(damageModifier)} = ${result}`,
-      );
+      setTimeout(() => {
+        this.damageOutput.setText(
+          `бросок 1к${DAMAGE_DIE}${Math.sign(damageModifier) >= 0 ? '+' : '-'}${Math.abs(damageModifier)} : ${diceRoll}${Math.sign(damageModifier) >= 0 ? '+' : '-'}${Math.abs(damageModifier)} = ${result}`,
+        );
+      }, 100);
     });
   }
 }
