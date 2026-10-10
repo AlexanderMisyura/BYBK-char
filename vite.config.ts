@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/BYBK-char/',
+  base: '/bybk-char/',
 
   build: {
     outDir: 'dist',
