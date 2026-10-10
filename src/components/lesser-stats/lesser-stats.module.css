@@ -3,12 +3,18 @@
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
+
+
+  @media (max-width: 550px) {
+    padding: 0.5rem;
+  }
 }
 
 .stat {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  flex-wrap: wrap;
   text-wrap: nowrap;
 }
 

@@ -6,12 +6,20 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 550px) {
+    padding: 0.5rem;
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+
+  @media (max-width: 550px) {
+    padding: 0.5rem;
+  }
 }
 
 .name {
@@ -30,6 +38,10 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:invalid {
+    border-color: red;
+  }
 }
 
 .large-text-input {
