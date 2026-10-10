@@ -37,7 +37,7 @@ export class CharSheet extends BaseComponent<'div'> {
     div(
       { classes: [styles.container] },
       label({ htmlFor: 'name' }, span({ text: 'ИМЯ ПЕРСОНАЖА' })),
-      this.nameInput,
+      div({classes: [styles.flexWrapper]}, this.nameInput),
     ),
 
     this.mainStats,
@@ -45,12 +45,12 @@ export class CharSheet extends BaseComponent<'div'> {
 
     div(
       { classes: [styles.container] },
-      label({}, p({ text: 'ЗНАЧИМЫЕ ПРЕДМЕТЫ' }), this.itemsInput),
+      label({}, p({ text: 'ЗНАЧИМЫЕ ПРЕДМЕТЫ' }), div({classes: [styles.flexWrapper]}, this.itemsInput)),
     ),
     this.skills,
     div(
       { classes: [styles.container] },
-      label({}, p({ text: 'ДРУГОЕ' }), this.otherInput),
+      label({}, p({ text: 'ДРУГОЕ' }), div({classes: [styles.flexWrapper]}, this.otherInput)),
     ),
   );
   constructor() {

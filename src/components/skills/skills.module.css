@@ -23,12 +23,12 @@
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);width: 550px;
-  max-width: stretch;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 550px;
   height: 4rem;
 }
 
 .usage-input {
   width: 30px;
-  align-self: flex-end
+  align-self: flex-end;
 }
