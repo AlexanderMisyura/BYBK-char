@@ -36,12 +36,15 @@ export class Skills extends BaseComponent<'div'> {
     );
 
     this.appendChildren(
-      div({classes: [styles.header]}, div({ text: 'УМЕНИЯ' })),
-      ...Array.from({ length: SKILLS_NUMBER }).map((_, index) =>
-        div(
-          { classes: [styles.skill] },
-          this.skillDescriptions[index],
-          this.skillsUsage[index],
+      div({ text: 'УМЕНИЯ' }),
+      div(
+        { classes: [styles.skillsContainer] },
+        ...Array.from({ length: SKILLS_NUMBER }).map((_, index) =>
+          div(
+            { classes: [styles.skill] },
+            this.skillDescriptions[index],
+            this.skillsUsage[index],
+          ),
         ),
       ),
     );
