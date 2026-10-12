@@ -86,11 +86,29 @@ const li = (
 ): BaseComponent<'li'> =>
   new BaseComponent<'li'>({ ...properties, elementTag: 'li' }, ...children);
 
+const option = (
+  properties: UtilityTagProperties<'option'>,
+  ...children: BaseComponent<keyof HTMLElementTagNameMap>[]
+): BaseComponent<'option'> =>
+  new BaseComponent<'option'>(
+    { ...properties, elementTag: 'option' },
+    ...children,
+  );
+
 const p = (
   properties: UtilityTagProperties<'p'>,
   ...children: BaseComponent<keyof HTMLElementTagNameMap>[]
 ): BaseComponent<'p'> =>
   new BaseComponent<'p'>({ ...properties, elementTag: 'p' }, ...children);
+
+const select = (
+  properties: UtilityTagProperties<'select'>,
+  ...children: BaseComponent<keyof HTMLElementTagNameMap>[]
+): BaseComponent<'select'> =>
+  new BaseComponent<'select'>(
+    { ...properties, elementTag: 'select' },
+    ...children,
+  );
 
 const span = (
   properties: UtilityTagProperties<'span'>,
@@ -127,7 +145,9 @@ export {
   input,
   label,
   li,
+  option,
   p,
+  select,
   span,
   summary,
   textarea,
