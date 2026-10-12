@@ -4,7 +4,6 @@
   gap: 1rem;
   padding: 1rem;
 
-
   @media (max-width: 550px) {
     padding: 0.5rem;
   }
@@ -19,7 +18,17 @@
 }
 
 .roll-button {
-  height: 100%;
-  aspect-ratio: 1/1;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
   cursor: pointer;
+  background-color: transparent;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--accent-bg);
+      border-color: var(--accent-border);
+    }
+  }
 }
