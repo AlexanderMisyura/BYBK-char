@@ -5,6 +5,7 @@
   padding: 1rem;
   max-width: 900px;
   margin: 0 auto;
+  background-color: var(--bg-semi-transparent);
 
   @media (max-width: 550px) {
     padding: 0.5rem;
@@ -20,18 +21,13 @@
   gap: 1rem;
 }
 
-/* .theme-selector {
-  margin-left: auto;
-} */
-
 .container {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 
   label {
-    display: flex;
-    flex-direction: column;
+    max-width: fit-content;
   }
 
   @media (max-width: 550px) {
