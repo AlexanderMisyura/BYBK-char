@@ -1,6 +1,7 @@
 import type { Character } from './character';
 
-export const STORAGE_KEY = 'BYBK_char';
+export const STORAGE_CHAR_KEY = 'BYBK_char';
+export const STORAGE_THEME_KEY = 'BYBK_theme';
 export const DAMAGE_DIE = 6;
 export const SKILLS_NUMBER = 4;
 

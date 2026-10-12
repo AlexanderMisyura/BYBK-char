@@ -1,11 +1,14 @@
 import { BaseComponent } from '@/components/base';
 import { textarea, input, label, form, p, div, span } from '@/components/utils';
-import { MainStats } from '../main-stats/main-stats';
 import { LesserStats } from '../lesser-stats/lesser-stats';
+import { MainStats } from '../main-stats/main-stats';
+import { Skills } from '../skills/skills';
+import { ThemeSelector } from '../theme-selector/theme-selector';
 import type { Character } from '@/models/character';
 import { getCharData, setCharData } from '@/utils/char-data';
-import { Skills } from '../skills/skills';
 import styles from './char-sheet.module.css';
+
+const themeSelector = new ThemeSelector();
 
 export class CharSheet extends BaseComponent<'div'> {
   private character: Character = getCharData();
@@ -37,7 +40,11 @@ export class CharSheet extends BaseComponent<'div'> {
     div(
       { classes: [styles.container] },
       label({ htmlFor: 'name' }, span({ text: 'ИМЯ ПЕРСОНАЖА' })),
-      div({classes: [styles.flexWrapper]}, this.nameInput),
+      div(
+        { classes: [styles.flexWrapperName] },
+        this.nameInput,
+        themeSelector,
+      ),
     ),
 
     this.mainStats,
@@ -45,12 +52,20 @@ export class CharSheet extends BaseComponent<'div'> {
 
     div(
       { classes: [styles.container] },
-      label({}, p({ text: 'ЗНАЧИМЫЕ ПРЕДМЕТЫ' }), div({classes: [styles.flexWrapper]}, this.itemsInput)),
+      label(
+        {},
+        p({ text: 'ЗНАЧИМЫЕ ПРЕДМЕТЫ' }),
+        div({ classes: [styles.flexWrapper] }, this.itemsInput),
+      ),
     ),
     this.skills,
     div(
       { classes: [styles.container] },
-      label({}, p({ text: 'ДРУГОЕ' }), div({classes: [styles.flexWrapper]}, this.otherInput)),
+      label(
+        {},
+        p({ text: 'ДРУГОЕ' }),
+        div({ classes: [styles.flexWrapper] }, this.otherInput),
+      ),
     ),
   );
   constructor() {
